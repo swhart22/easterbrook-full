@@ -1,0 +1,203 @@
+<html>
+<head>
+
+<script src="https://use.typekit.net/fhr0vwf.js"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
+<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body>
+<style>
+#title{
+	font-family:'playfair display',serif;
+	font-weight:900;
+	font-size:27px;
+	position:fixed;
+	margin-bottom:15px;
+}
+.intro-title{
+	font-family:'Georgia',serif;
+	font-weight:700;
+	font-size:20px;
+	margin-bottom:15px;
+}
+.intro-viz{
+	font-family:'proxima nova',sans-serif;
+	font-weight:300;
+	font-size:20px;
+	margin-bottom:10px;
+}
+.intro-viz-highlight{
+	color:#fafafa;
+	padding:2px 7px 2px 7px;
+	border-radius:5px;
+	
+}
+.action{
+	color:'#fafafa';
+	font-weight:700;
+}
+#innerwrapper{
+	display:flex;
+	
+}
+#icons{
+	display:flex;
+	flex-wrap:wrap;
+}	
+.icon{
+	margin:2px;
+	font-size:18px;
+	font-family:'proxima nova', sans-serif;
+	width:23.5%;
+	cursor:pointer;
+}
+.file-icon{
+	width:20px;
+	padding:7px;
+}
+.file-background{
+	border-radius:50%;
+	display:inline-block;
+	margin-right:5px;
+}
+#cats{
+	width:30%;
+	font-family:'proxima nova', sans-serif;
+	font-size:15px;
+	font-weight:700;
+	text-align:right;
+	position:fixed;
+}
+#prompt{
+	font-family:'proxima nova',sans-serif;
+	font-size:20px;
+	font-style:italic;
+	font-weight:100;
+}
+#mods{
+	width:60%;
+	margin-left:20%;
+	font-size:14px;
+	font-family:'proxima nova', sans-serif;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+.explainer{
+	font-family:'proxima nova', sans-serif;
+	font-size:17px;
+	font-weight:100;
+}
+.mod{
+	margin-bottom:30px;
+	width:50%;
+
+}
+.cat{
+	border-right-color:'yellow';
+	border-right-style:'solid';
+	border-right-width:1px;
+	width:auto;
+}
+.case-names{
+	font-size:15px;
+	padding:5px;
+	display:flex;
+	align-items:center;
+}
+.modal-case-name{
+	font-family:'proxima nova',sans-serif;
+	font-weight:700;
+	font-size:20px;
+}
+/* The Modal (background) */
+.iw-modal {
+    /*display: none;  Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(255,255,255,0.8);  /*Black w/ opacity */
+   
+}
+
+/* Modal Content/Box */
+.iw-modal-content {
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    margin-top:5%;
+    padding: 20px;
+    border: 1px solid #888;
+    width:50%; /* Could be more or less, depending on screen size */
+    font-family:'proxima nova',sans-serif;
+    border-radius:10px;
+    overflow-y:scroll;
+    font-size:15px;
+    max-height:70%;
+}
+a:link{
+	font-weight:700;
+	text-decoration:underline;
+	color:#233142;
+}
+a:visited{
+	color:#233142;
+}
+a:hover{
+	color:#F95959;
+}
+a:active{
+	color:#F95959;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    font-family:'proxima nova', sans-serif;
+    font-weight:100;
+    text-transform:uppercase;
+    float:right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (max-width: 750px) {
+  .icon{
+  	width:48%;
+  }
+  .intro-viz{
+	font-family:'proxima nova',sans-serif;
+	font-weight:300;
+	font-size:15px;
+	margin-bottom:10px;
+}
+}
+</style>
+
+<div id="target"></div>
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script src='node_modules/jquery/dist/jquery.min.js'></script>
+<script src='node_modules/d3/build/d3.min.js'></script>
+<script src='node_modules/lodash/lodash.min.js'></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-ease.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-selection.v1.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+<script src="https://d3js.org/d3-transition.v1.min.js"></script>
+<script src='index.js'></script>
+
+</body>
+</html> 
